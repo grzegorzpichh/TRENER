@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grzegorz Pich | Plany treningowe i prowadzenie online</title>
+<meta name="description" content="Plany treningowe i prowadzenie online: masa, redukcja, rekompozycja. Konkretny plan, jasne zasady, cotygodniowe check-iny.">
+<meta property="og:title" content="Grzegorz Pich | Plany treningowe i prowadzenie online">
+<meta property="og:description" content="Plan treningowy dopasowany do Twojego celu i czasu. Online, bez zgadywania.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0b; --bg2:#111113; --line:#232327; --text:#ededf0; --mute:#9b9ba5;
+  --acc:#d6ff3f; --acc-ink:#0a0a0b; --radius:14px; --gut:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 var(--gut)}
+header{position:sticky;top:0;z-index:10;background:rgba(10,10,11,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:800;letter-spacing:-.02em;text-decoration:none}
+nav{display:flex;gap:22px;font-size:14px}
+nav a{text-decoration:none;color:var(--mute);transition:color .15s}
+nav a:hover{color:var(--text)}
+section{padding:84px 0;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);font-weight:600;margin-bottom:14px}
+h1{font-size:clamp(36px,7vw,68px);line-height:1.04;letter-spacing:-.035em;font-weight:800;max-width:15ch}
+h2{font-size:clamp(26px,4vw,40px);line-height:1.12;letter-spacing:-.025em;font-weight:700;max-width:22ch}
+h3{font-size:18px;font-weight:600;letter-spacing:-.01em}
+.lead{color:var(--mute);font-size:18px;max-width:52ch;margin-top:22px}
+.sub{color:var(--mute);max-width:58ch;margin-top:14px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{display:inline-block;padding:14px 22px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--line);cursor:pointer;background:transparent;color:var(--text);font-family:inherit;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px);background:var(--bg2)}
+.btn.primary{background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
+.btn.primary:hover{background:#e4ff72}
+.hero{padding:110px 0 90px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.num{font-size:13px;color:var(--acc);font-weight:700;margin-bottom:10px}
+.card p{color:var(--mute);font-size:15px;margin-top:8px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.plan{display:flex;flex-direction:column}
+.plan.featured{border-color:var(--acc)}
+.tag{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--acc);color:var(--acc-ink);padding:3px 10px;border-radius:999px;margin-bottom:12px}
+.price{font-size:38px;font-weight:800;letter-spacing:-.03em;margin:14px 0 4px}
+.price small{font-size:14px;font-weight:500;color:var(--mute)}
+.plan ul{list-style:none;margin:18px 0 24px;flex:1}
+.plan li{position:relative;padding-left:22px;font-size:14.5px;color:#cfcfd6;margin-bottom:9px}
+.plan li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:2px;background:var(--acc)}
+.note{font-size:13px;color:var(--mute);margin-top:18px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.two ul{list-style:none;margin-top:14px}
+.two li{font-size:15px;color:#cfcfd6;margin-bottom:10px;padding-left:22px;position:relative}
+.yes li::before{content:"+";position:absolute;left:0;color:var(--acc);font-weight:700}
+.no li::before{content:"–";position:absolute;left:0;color:#ff6b6b;font-weight:700}
+form{margin-top:30px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+label{display:block;font-size:13px;color:var(--mute);margin-bottom:6px}
+input,select,textarea{width:100%;background:var(--bg2);border:1px solid var(--line);border-radius:10px;color:var(--text);padding:12px 14px;font:inherit;font-size:15px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--acc);outline-offset:1px;border-color:transparent}
+textarea{min-height:120px;resize:vertical}
+.full{grid-column:1/-1}
+.result{display:none;margin-top:24px}
+.result.on{display:block}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.kpi{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:16px}
+.kpi b{display:block;font-size:26px;letter-spacing:-.02em}
+.kpi span{font-size:12.5px;color:var(--mute)}
+.contact-info{margin-top:22px;color:var(--mute);font-size:15px}
+.contact-info a{color:var(--text)}
+footer{padding:36px 0;color:var(--mute);font-size:13px}
+.profile{display:grid;grid-template-columns:340px 1fr;gap:40px;margin-top:40px;align-items:center}
+.ph{position:relative;margin:0;background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph.empty img{display:none}
+.ph.empty::after{content:"Miejsce na zdjęcie";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--mute);font-size:13px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.gallery .ph{aspect-ratio:1/1}
+.facts{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+.facts li{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px}
+.facts b{display:block;font-size:20px;letter-spacing:-.02em}
+.facts span{font-size:12.5px;color:var(--mute)}
+@media (max-width:820px){
+  .profile{grid-template-columns:1fr}
+  .gallery,.facts{grid-template-columns:1fr}
+  .portrait{max-width:340px}
+  nav{display:none}
+  .steps,.plans,.two,.kpis{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+  section{padding:60px 0}
+  .hero{padding:70px 0 60px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Grzegorz Pich</a>
+    <nav aria-label="Menu">
+      <a href="#o-mnie">Trener</a>
+      <a href="#jak">Jak to działa</a>
+      <a href="#oferta">Oferta</a>
+      <a href="#kalkulator">Kalkulator</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Plany treningowe online</p>
+      <h1>Trening bez zgadywania.</h1>
+      <p class="lead">Plan siłowy dopasowany do Twojego celu, czasu i sprzętu. Masa, redukcja albo rekompozycja, z opisem każdego ćwiczenia i regularną korektą.</p>
+      <div class="btns">
+        <a class="btn primary" href="#kontakt">Zacznij od ankiety</a>
+        <a class="btn" href="#oferta">Zobacz ofertę</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="o-mnie">
+    <div class="wrap">
+      <p class="eyebrow">Trener</p>
+      <h2>Trenuję tak, jak uczę.</h2>
+      <div class="profile">
+        <figure class="ph portrait">
+          <img src="grzegorz-portret.jpg" alt="Grzegorz Pich, trener" loading="lazy" onerror="this.parentNode.classList.add('empty')">
+        </figure>
+        <div>
+          <p class="lead" style="margin-top:0">Jestem Grzegorz. Od 3 lat trenuję siłowo, a teraz pracuję nad rekompozycją sylwetki, cztery razy w tygodniu.</p>
+          <p class="sub">Plany opieram na tym, co sam stosuję na co dzień: progresja obciążeń, poprawna technika i regularność zamiast kombinowania. Nie mam tytułów ani certyfikatów i nie będę udawał, że jest inaczej. Wiarygodność buduję konkretnym planem, jasnymi zasadami i korektą na podstawie Twoich wyników.</p>
+          <ul class="facts">
+            <li><b>3 lata</b><span>treningu siłowego</span></li>
+            <li><b>4× w tyg.</b><span>własny trening</span></li>
+            <li><b>Online</b><span>cała Polska, Rzeszów lokalnie</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="gallery">
+        <figure class="ph"><img src="trening-1.jpg" alt="Trening siłowy" loading="lazy" onerror="this.parentNode.classList.add('empty')"></figure>
+        <figure class="ph"><img src="trening-2.jpg" alt="Trening siłowy na siłowni" loading="lazy" onerror="this.parentNode.classList.add('empty')"></figure>
+        <figure class="ph"><img src="trening-3.jpg" alt="Własny progres treningowy" loading="lazy" onerror="this.parentNode.classList.add('empty')"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="jak">
+    <div class="wrap">
+      <p class="eyebrow">Jak to działa</p>
+      <h2>Trzy kroki, zero chaosu.</h2>
+      <div class="steps">
+        <div class="card"><div class="num">01</div><h3>Ankieta</h3><p>Krótki formularz: cel, doświadczenie, dni treningowe, sprzęt, ewentualne ograniczenia. Zajmuje kilka minut.</p></div>
+        <div class="card"><div class="num">02</div><h3>Plan</h3><p>Dostajesz plan z progresją, opisem techniki i zasadami dobierania ciężarów. Wiesz, co robić na każdym treningu.</p></div>
+        <div class="card"><div class="num">03</div><h3>Korekta</h3><p>W prowadzeniu raz w tygodniu sprawdzamy wyniki i poprawiamy plan, zamiast czekać, aż coś przestanie działać.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="oferta">
+    <div class="wrap">
+      <p class="eyebrow">Oferta</p>
+      <h2>Trzy opcje, bez ukrytych kosztów.</h2>
+      <div class="plans">
+        <div class="card plan">
+          <h3>Plan jednorazowy</h3>
+          <p>Dla osób, które chcą dobry plan i resztę zrobić samodzielnie.</p>
+          <div class="price">149 zł <small>jednorazowo</small></div>
+          <ul>
+            <li>Plan na 8 tygodni z progresją</li>
+            <li>Dopasowanie do ankiety (cel, dni, sprzęt)</li>
+            <li>Opis techniki ćwiczeń</li>
+            <li>Ogólne wskazówki żywieniowe</li>
+            <li>Jedna poprawka planu w ciągu 14 dni</li>
+          </ul>
+          <a class="btn" href="#kontakt" data-pkg="Plan jednorazowy">Wybieram ten plan</a>
+        </div>
+        <div class="card plan featured">
+          <span class="tag">Polecany</span>
+          <h3>Prowadzenie online</h3>
+          <p>Dla osób, które chcą regularnej korekty i kogoś, kto pilnuje progresu.</p>
+          <div class="price">250 zł <small>/ mies.</small></div>
+          <ul>
+            <li>Plan aktualizowany co miesiąc</li>
+            <li>Cotygodniowy check-in: waga, zdjęcia, wyniki</li>
+            <li>Korekta planu na podstawie danych</li>
+            <li>Kontakt na WhatsAppie, odpowiedź do 24 h w dni robocze</li>
+            <li>Ogólne wskazówki żywieniowe</li>
+            <li>Bez umowy na czas określony</li>
+          </ul>
+          <a class="btn primary" href="#kontakt" data-pkg="Prowadzenie online">Wybieram prowadzenie</a>
+        </div>
+        <div class="card plan">
+          <h3>Konsultacja 60 min</h3>
+          <p>Dla osób, które mają już plan i chcą go sprawdzić.</p>
+          <div class="price">99 zł <small>jednorazowo</small></div>
+          <ul>
+            <li>Analiza Twojego obecnego planu</li>
+            <li>Ocena techniki na nagraniu wideo</li>
+            <li>Odpowiedzi na pytania</li>
+            <li>Lista zaleceń na piśmie po rozmowie</li>
+          </ul>
+          <a class="btn" href="#kontakt" data-pkg="Konsultacja 60 min">Umawiam konsultację</a>
+        </div>
+      </div>
+      <p class="note">Nie wiesz, co wybrać? Napisz, a podpowiem. Płatność po ustaleniu pakietu, przed startem współpracy.</p>
+    </div>
+  </section>
+
+  <section id="zasady">
+    <div class="wrap">
+      <p class="eyebrow">Jasne zasady</p>
+      <h2>Co robię, a czego nie.</h2>
+      <div class="two">
+        <div class="card yes">
+          <h3>Robię</h3>
+          <ul>
+            <li>Plany siłowe pod masę, redukcję i rekompozycję</li>
+            <li>Pracę z początkującymi i średniozaawansowanymi</li>
+            <li>Ogólne zasady żywienia: białko, kalorie, regularność</li>
+            <li>Korektę planu na podstawie Twoich wyników</li>
+          </ul>
+        </div>
+        <div class="card no">
+          <h3>Nie robię</h3>
+          <ul>
+            <li>Jadłospisów ani diet leczniczych</li>
+            <li>Pracy z kontuzjami i chorobami. Wtedy odsyłam do lekarza lub fizjoterapeuty</li>
+            <li>Obietnic wyniku w konkretnym czasie</li>
+            <li>Planów bez ankiety, bo nie da się ich dobrze dopasować</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kalkulator">
+    <div class="wrap">
+      <p class="eyebrow">Kalkulator</p>
+      <h2>Ile kalorii i białka na start?</h2>
+      <p class="sub">Orientacyjne wartości wyjściowe. Wzór Mifflina-St Jeora plus współczynnik aktywności.</p>
+      <div class="card" style="margin-top:30px">
+        <form id="calc" novalidate>
+          <div class="grid">
+            <div><label for="c-sex">Płeć</label><select id="c-sex"><option value="m">Mężczyzna</option><option value="f">Kobieta</option></select></div>
+            <div><label for="c-age">Wiek (lata)</label><input id="c-age" type="number" min="14" max="90" inputmode="numeric" placeholder="np. 26"></div>
+            <div><label for="c-h">Wzrost (cm)</label><input id="c-h" type="number" min="120" max="230" inputmode="numeric" placeholder="np. 180"></div>
+            <div><label for="c-w">Waga (kg)</label><input id="c-w" type="number" min="35" max="250" step="0.1" inputmode="decimal" placeholder="np. 80"></div>
+            <div><label for="c-act">Aktywność</label>
+              <select id="c-act">
+                <option value="1.2">Mało ruchu, praca siedząca</option>
+                <option value="1.375">Trening 1–3 razy w tygodniu</option>
+                <option value="1.55" selected>Trening 4–5 razy w tygodniu</option>
+                <option value="1.725">Trening 6–7 razy lub praca fizyczna</option>
+              </select></div>
+            <div><label for="c-goal">Cel</label>
+              <select id="c-goal">
+                <option value="0">Rekompozycja (utrzymanie)</option>
+                <option value="300">Masa (nadwyżka ok. 300 kcal)</option>
+                <option value="-400">Redukcja (deficyt ok. 400 kcal)</option>
+              </select></div>
+            <div class="full"><button class="btn primary" type="submit">Policz</button></div>
+          </div>
+        </form>
+        <div class="result" id="res" aria-live="polite">
+          <div class="kpis">
+            <div class="kpi"><b id="r-kcal">–</b><span>kcal dziennie (cel)</span></div>
+            <div class="kpi"><b id="r-tdee">–</b><span>kcal utrzymania (TDEE)</span></div>
+            <div class="kpi"><b id="r-p">–</b><span>białka dziennie (1,6–2,2 g/kg)</span></div>
+          </div>
+          <p class="note" id="r-err" style="color:#ff8a8a;display:none"></p>
+          <p class="note">To przybliżenie, a nie zalecenie medyczne. Obserwuj wagę przez 2–3 tygodnie i koryguj kalorie o ok. 100–150 kcal, jeśli trend nie zgadza się z celem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="wrap">
+      <p class="eyebrow">Kontakt</p>
+      <h2>Napisz, odpowiem w ciągu 24 godzin.</h2>
+      <p class="sub">Opisz cel i obecną sytuację treningową. Po wysłaniu otworzy się Twój program pocztowy z gotową wiadomością.</p>
+      <form id="contact" novalidate>
+        <div class="grid">
+          <div><label for="f-name">Imię</label><input id="f-name" required autocomplete="given-name"></div>
+          <div><label for="f-mail">E-mail</label><input id="f-mail" type="email" required autocomplete="email"></div>
+          <div class="full"><label for="f-pkg">Interesuje mnie</label>
+            <select id="f-pkg">
+              <option>Plan jednorazowy</option>
+              <option>Prowadzenie online</option>
+              <option>Konsultacja 60 min</option>
+              <option>Nie wiem, proszę o poradę</option>
+            </select></div>
+          <div class="full"><label for="f-msg">Cel i doświadczenie</label><textarea id="f-msg" placeholder="Np. cel, od jak dawna trenujesz, ile dni w tygodniu możesz ćwiczyć, jaki masz sprzęt"></textarea></div>
+          <div class="full"><button class="btn primary" type="submit">Wyślij wiadomość</button></div>
+        </div>
+        <p class="note" id="f-err" style="color:#ff8a8a;display:none">Uzupełnij imię i poprawny e-mail.</p>
+      </form>
+      <p class="contact-info"><a href="mailto:kontakt@grzegorzpich.pl">kontakt@grzegorzpich.pl</a> · <a href="tel:+48571786471">+48 571 786 471</a> · Rzeszów, praca zdalna w całej Polsce</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Grzegorz Pich · grzegorzpich.pl</div>
+</footer>
+
+<script>
+(function(){
+  // Kalkulator
+  var calc=document.getElementById('calc');
+  calc.addEventListener('submit',function(e){
+    e.preventDefault();
+    var sex=document.getElementById('c-sex').value;
+    var age=parseFloat(document.getElementById('c-age').value);
+    var h=parseFloat(document.getElementById('c-h').value);
+    var w=parseFloat(document.getElementById('c-w').value);
+    var act=parseFloat(document.getElementById('c-act').value);
+    var goal=parseFloat(document.getElementById('c-goal').value);
+    var res=document.getElementById('res');
+    var err=document.getElementById('r-err');
+    res.classList.add('on');
+    if(!(age>=14&&age<=90&&h>=120&&h<=230&&w>=35&&w<=250)){
+      err.textContent='Uzupełnij wiek, wzrost i wagę w sensownych zakresach.';
+      err.style.display='block';
+      ['r-kcal','r-tdee','r-p'].forEach(function(id){document.getElementById(id).textContent='–';});
+      return;
+    }
+    err.style.display='none';
+    var bmr=10*w+6.25*h-5*age+(sex==='m'?5:-161);
+    var tdee=bmr*act;
+    var target=tdee+goal;
+    var pLow=Math.round(w*1.6), pHigh=Math.round(w*2.2);
+    document.getElementById('r-tdee').textContent=Math.round(tdee/10)*10;
+    document.getElementById('r-kcal').textContent=Math.round(target/10)*10;
+    document.getElementById('r-p').textContent=pLow+'–'+pHigh+' g';
+  });
+
+  // Wybór pakietu z kart
+  document.querySelectorAll('[data-pkg]').forEach(function(a){
+    a.addEventListener('click',function(){
+      document.getElementById('f-pkg').value=a.getAttribute('data-pkg');
+    });
+  });
+
+  // Formularz kontaktowy (mailto)
+  var form=document.getElementById('contact');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=document.getElementById('f-name').value.trim();
+    var mail=document.getElementById('f-mail').value.trim();
+    var pkg=document.getElementById('f-pkg').value;
+    var msg=document.getElementById('f-msg').value.trim();
+    var err=document.getElementById('f-err');
+    if(!name||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail)){err.style.display='block';return;}
+    err.style.display='none';
+    var subject='Plany treningowe: '+pkg;
+    var body='Imię: '+name+'\nE-mail: '+mail+'\nPakiet: '+pkg+'\n\n'+msg;
+    window.location.href='mailto:kontakt@grzegorzpich.pl?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>
